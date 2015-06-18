@@ -7,12 +7,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using OfflineWebapi.Context;
 using OfflineWebapi.Models;
 
 namespace OfflineWebapi.Controllers
 {
+    [EnableCors(origins: "http://localhost:3001", headers: "*", methods: "*")]
     public class ItemsController : ApiController
     {
         private InventoryContext db = new InventoryContext();
