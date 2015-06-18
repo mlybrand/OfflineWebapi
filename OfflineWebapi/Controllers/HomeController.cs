@@ -10,11 +10,8 @@ namespace OfflineWebapi.Controllers
 
     public class HomeController : Controller
     {
-        private InventoryContext db = new InventoryContext();
-
         public ActionResult Index()
         {
-            var foo = db.Items.ToList();
             return View();
         }
 
